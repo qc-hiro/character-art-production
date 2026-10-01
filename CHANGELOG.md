@@ -1,5 +1,12 @@
 # 变更记录
 
+## 1.0.0
+
+- 改为多 skill 仓库；角色 skill 移至 skills/character-art-production。
+- 新增 skills/scene-art-production：空间设定、镜头透视、光色与多镜头一致性。
+- 自动检查覆盖每个 skill；安装时需要选择 skills 下的目标目录。
+- 旧版根目录安装方式保留在 v0.1.0 标签，升级前请按新目录重新安装。
+
 ## 0.1.0
 
 - 初始通用美术流程：角色设计、三视图、姿势变体、Q版、风格探索与返修。
