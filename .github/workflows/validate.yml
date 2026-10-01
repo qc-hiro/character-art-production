@@ -1,0 +1,20 @@
+name: Validate skill
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install validator dependency
+        run: python -m pip install PyYAML==6.0.3
+      - name: Validate skill and release metadata
+        run: python scripts/validate_skill.py
