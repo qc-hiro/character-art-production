@@ -1,6 +1,13 @@
-# 角色美术制作 Skill
+# 美术 Skills
 
-用于角色设计、三视图、姿势变体、Q版与审图返修的通用方法库。
+统一维护不同美术任务的通用方法。每个 skill 独立安装、调用和演进，共用仓库版本、贡献流程与自动检查。
+
+| Skill | 用途 | 安装目录 |
+| --- | --- | --- |
+| `$character-art-production` | 角色设计、三视图、姿势变体、Q版与返修 | `skills/character-art-production` |
+| `$scene-art-production` | 环境概念、空间设定、镜头透视、光色与多镜头一致性 | `skills/scene-art-production` |
+
+角色与场景结合的任务可以同时使用两个 skill，各自负责身份与空间相关约束。
 
 ## 访问
 
@@ -10,9 +17,11 @@
 
 ## 安装与更新
 
-在 Codex 中提供本仓库链接，请其把仓库安装为 `character-art-production` skill；需要更新时，请其检查该仓库最新的已发布版本，查看变更，再更新本地 skill。公开下载无需受邀，也不需要共享凭据。
+在 Codex 中提供本仓库链接，请其安装 `skills/character-art-production`、`skills/scene-art-production`，或两者。需要更新时，请其检查最新已发布版本，查看变更，再更新对应的本地 skill。公开下载无需受邀，也不需要共享凭据。
 
-如果手动管理，把仓库克隆到本机 Codex 的 `skills/character-art-production` 目录，然后调用 `$character-art-production`。更新前检查本地修改；有修改时先保留并解决冲突，不覆盖。建议使用发布标签选择稳定版本。
+如果手动管理，先把仓库克隆到单独位置，选择稳定发布标签，再把 `skills/` 下需要的整个 skill 文件夹复制到本机 Codex 的 skills 目录。不要把整个仓库当成一个 skill 安装。更新前检查本地修改；有修改时先保留并解决冲突，不覆盖。
+
+v0.1.0 使用根目录单 skill 结构；从该版升级需要按上表目录重新安装。库名保留以保持已有链接可用。
 
 仓库更新不会自动更新每个人已安装的本地副本。需要拉取更新或重新安装；当前仓库没有后台自动同步程序。
 
